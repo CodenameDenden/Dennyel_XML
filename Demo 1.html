@@ -1,0 +1,28 @@
+<!-- Panganiban, Dennyel C. IT-3309 -->
+<!DOCTYPE html>
+<html>
+    
+    <!-- Syntax -->
+    <script>
+        function loadXMLDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "greeting.txt");
+            xhttp.send();
+
+            xhttp.onreadystatechange = function() {
+                document.getElementById("demo").innerHTML = this.responseText;
+            };
+        }
+    </script>
+
+    <head>
+        <title>XML Demonstration</title>
+    </head>
+
+    <body>
+        <h2>Using the XMLHttpRequest Object</h2>
+        <div id= "demo">
+            <button type = "button" onclick= "loadXMLDoc()"> Change Content</button>
+        </div>
+    </body>
+</html>
